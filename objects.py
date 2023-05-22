@@ -152,11 +152,12 @@ class PersonName (object):
                 , fuzz.ratio(n, name_to_match)
                 , fuzz.partial_ratio(n, name_to_match)
                 )
-            print(n, name_to_match,score)
+
             if score > best_score:
                 best_score = score
                 
             if score == 100:
+                print (n, name_to_match, score)
                 break
 
         # # deal with names where first and last transposed (typically japanese names, yoko ono is really ono yono)
